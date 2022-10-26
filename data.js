@@ -10,11 +10,13 @@ var data = [
                     {
                         value: "Opsi 1.1 Pulsa",
                         label: "Opsi 1.1 Pulsa",
+                        harga: 100000,
                         url: "https://google.com"
                     },
                     {
                         value: "Opsi 1.2 Pulsa",
                         label: "Opsi 1.2 Pulsa",
+                        harga: 200000,
                         url: "https://google.com"
                     }
                 ]
@@ -26,11 +28,13 @@ var data = [
                     {
                         value: "Opsi 2.1 Pulsa",
                         label: "Opsi 2.1 Pulsa",
+                        harga: 300000,
                         url: "https://google.com"
                     },
                     {
                         value: "Opsi 2.2 Pulsa",
                         label: "Opsi 2.2 Pulsa",
+                        harga: 400000,
                         url: "https://google.com"
                     }
                 ]
@@ -52,11 +56,13 @@ var data = [
                             {
                                 value: "Opsi 1.1.1 Paket Internet",
                                 label: "Opsi 1.1.1 Paket Internet",
+                                harga: 500000,
                                 url: "https://google.com"
                             },
                             {
                                 value: "Opsi 1.1.2 Paket Internet",
                                 label: "Opsi 1.1.2 Paket Internet",
+                                harga: 600000,
                                 url: "https://google.com"
                             }
                         ]
@@ -68,11 +74,13 @@ var data = [
                             {
                                 value: "Opsi 1.2.1 Paket Internet",
                                 label: "Opsi 1.2.1 Paket Internet",
+                                harga: 700000,
                                 url: "https://google.com"
                             },
                             {
                                 value: "Opsi 1.2.2 Paket Internet",
                                 label: "Opsi 1.2.2 Paket Internet",
+                                harga: 800000,
                                 url: "https://google.com"
                             }
                         ]
@@ -90,11 +98,13 @@ var data = [
                             {
                                 value: "Opsi 2.1.1 Paket Internet",
                                 label: "Opsi 2.1.1 Paket Internet",
+                                harga: 900000,
                                 url: "https://google.com"
                             },
                             {
                                 value: "Opsi 2.1.2 Paket Internet",
                                 label: "Opsi 2.1.2 Paket Internet",
+                                harga: 1000000,
                                 url: "https://google.com"
                             }
                         ]
@@ -106,11 +116,13 @@ var data = [
                             {
                                 value: "Opsi 2.2.1 Paket Internet",
                                 label: "Opsi 2.2.1 Paket Internet",
+                                harga: 1100000,
                                 url: "https://google.com"
                             },
                             {
                                 value: "Opsi 2.2.2 Paket Internet",
                                 label: "Opsi 2.2.2 Paket Internet",
+                                harga: 1200000,
                                 url: "https://google.com"
                             }
                         ]
@@ -134,11 +146,13 @@ var data = [
                             {
                                 value: "Opsi 1.1.1 Voucher Internet",
                                 label: "Opsi 1.1.1 Voucher Internet",
+                                harga: 100000,
                                 url: "https://google.com"
                             },
                             {
                                 value: "Opsi 1.1.2 Voucher Internet",
                                 label: "Opsi 1.1.2 Voucher Internet",
+                                harga: 100000,
                                 url: "https://google.com"
                             }
                         ]
@@ -150,11 +164,13 @@ var data = [
                             {
                                 value: "Opsi 1.2.1 Voucher Internet",
                                 label: "Opsi 1.2.1 Voucher Internet",
+                                harga: 100000,
                                 url: "https://google.com"
                             },
                             {
                                 value: "Opsi 1.2.2 Voucher Internet",
                                 label: "Opsi 1.2.2 Voucher Internet",
+                                harga: 100000,
                                 url: "https://google.com"
                             }
                         ]
@@ -172,11 +188,13 @@ var data = [
                             {
                                 value: "Opsi 2.1.1 Voucher Internet",
                                 label: "Opsi 2.1.1 Voucher Internet",
+                                harga: 100000,
                                 url: "https://google.com"
                             },
                             {
                                 value: "Opsi 2.1.2 Voucher Internet",
                                 label: "Opsi 2.1.2 Voucher Internet",
+                                harga: 100000,
                                 url: "https://google.com"
                             }
                         ]
@@ -188,11 +206,13 @@ var data = [
                             {
                                 value: "Opsi 2.2.1 Voucher Internet",
                                 label: "Opsi 2.2.1 Voucher Internet",
+                                harga: 100000,
                                 url: "https://google.com"
                             },
                             {
                                 value: "Opsi 2.2.2 Voucher Internet",
                                 label: "Opsi 2.2.2 Voucher Internet",
+                                harga: 100000,
                                 url: "https://google.com"
                             }
                         ]
@@ -212,11 +232,13 @@ var data = [
                     {
                         value: "Opsi 1.1 Paket SMS/Telp",
                         label: "Opsi 1.1 Paket SMS/Telp",
+                        harga: 100000,
                         url: "https://google.com"
                     },
                     {
                         value: "Opsi 1.2 Paket SMS/Telp",
                         label: "Opsi 1.2 Paket SMS/Telp",
+                        harga: 100000,
                         url: "https://google.com"
                     }
                 ]
@@ -228,11 +250,13 @@ var data = [
                     {
                         value: "Opsi 2.1 Paket SMS/Telp",
                         label: "Opsi 2.1 Paket SMS/Telp",
+                        harga: 100000,
                         url: "https://google.com"
                     },
                     {
                         value: "Opsi 2.2 Paket SMS/Telp",
                         label: "Opsi 2.2 Paket SMS/Telp",
+                        harga: 100000,
                         url: "https://google.com"
                     }
                 ]
@@ -250,11 +274,13 @@ var data = [
                     {
                         value: "Opsi 1.1 E-Wallet",
                         label: "Opsi 1.1 E-Wallet",
+                        harga: 100000,
                         url: "https://google.com"
                     },
                     {
                         value: "Opsi 1.2 E-Wallet",
                         label: "Opsi 1.2 E-Wallet",
+                        harga: 100000,
                         url: "https://google.com"
                     }
                 ]
@@ -266,11 +292,13 @@ var data = [
                     {
                         value: "Opsi 2.1 E-Wallet",
                         label: "Opsi 2.1 E-Wallet",
+                        harga: 100000,
                         url: "https://google.com"
                     },
                     {
                         value: "Opsi 2.2 E-Wallet",
                         label: "Opsi 2.2 E-Wallet",
+                        harga: 100000,
                         url: "https://google.com"
                     }
                 ]
@@ -288,11 +316,13 @@ var data = [
                     {
                         value: "Opsi 1.1 Token PLN",
                         label: "Opsi 1.1 Token PLN",
+                        harga: 100000,
                         url: "https://google.com"
                     },
                     {
                         value: "Opsi 1.2 Token PLN",
                         label: "Opsi 1.2 Token PLN",
+                        harga: 100000,
                         url: "https://google.com"
                     }
                 ]
@@ -304,11 +334,13 @@ var data = [
                     {
                         value: "Opsi 2.1 Token PLN",
                         label: "Opsi 2.1 Token PLN",
+                        harga: 100000,
                         url: "https://google.com"
                     },
                     {
                         value: "Opsi 2.2 Token PLN",
                         label: "Opsi 2.2 Token PLN",
+                        harga: 100000,
                         url: "https://google.com"
                     }
                 ]
@@ -326,11 +358,13 @@ var data = [
                     {
                         value: "Opsi 1.1 Tagihan",
                         label: "Opsi 1.1 Tagihan",
+                        harga: 100000,
                         url: "https://google.com"
                     },
                     {
                         value: "Opsi 1.2 Tagihan",
                         label: "Opsi 1.2 Tagihan",
+                        harga: 100000,
                         url: "https://google.com"
                     }
                 ]
@@ -342,11 +376,13 @@ var data = [
                     {
                         value: "Opsi 2.1 Tagihan",
                         label: "Opsi 2.1 Tagihan",
+                        harga: 100000,
                         url: "https://google.com"
                     },
                     {
                         value: "Opsi 2.2 Tagihan",
                         label: "Opsi 2.2 Tagihan",
+                        harga: 100000,
                         url: "https://google.com"
                     }
                 ]
@@ -364,11 +400,13 @@ var data = [
                     {
                         value: "Opsi 1.1 Produk Lainnya 1",
                         label: "Opsi 1.1 Produk Lainnya 1",
+                        harga: 100000,
                         url: "https://google.com"
                     },
                     {
                         value: "Opsi 1.2 Produk Lainnya 1",
                         label: "Opsi 1.2 Produk Lainnya 1",
+                        harga: 100000,
                         url: "https://google.com"
                     }
                 ]
@@ -380,11 +418,13 @@ var data = [
                     {
                         value: "Opsi 2.1 Produk Lainnya 1",
                         label: "Opsi 2.1 Produk Lainnya 1",
+                        harga: 100000,
                         url: "https://google.com"
                     },
                     {
                         value: "Opsi 2.2 Produk Lainnya 1",
                         label: "Opsi 2.2 Produk Lainnya 1",
+                        harga: 100000,
                         url: "https://google.com"
                     }
                 ]
@@ -402,11 +442,13 @@ var data = [
                     {
                         value: "Opsi 1.1 Produk Lainnya 2",
                         label: "Opsi 1.1 Produk Lainnya 2",
+                        harga: 100000,
                         url: "https://google.com"
                     },
                     {
                         value: "Opsi 1.2 Produk Lainnya 2",
                         label: "Opsi 1.2 Produk Lainnya 2",
+                        harga: 100000,
                         url: "https://google.com"
                     }
                 ]
@@ -418,11 +460,13 @@ var data = [
                     {
                         value: "Opsi 2.1 Produk Lainnya 2",
                         label: "Opsi 2.1 Produk Lainnya 2",
+                        harga: 100000,
                         url: "https://google.com"
                     },
                     {
                         value: "Opsi 2.2 Produk Lainnya 2",
                         label: "Opsi 2.2 Produk Lainnya 2",
+                        harga: 100000,
                         url: "https://google.com"
                     }
                 ]
@@ -440,11 +484,13 @@ var data = [
                     {
                         value: "Opsi 1.1 Produk Lainnya 3",
                         label: "Opsi 1.1 Produk Lainnya 3",
+                        harga: 100000,
                         url: "https://google.com"
                     },
                     {
                         value: "Opsi 1.2 Produk Lainnya 3",
                         label: "Opsi 1.2 Produk Lainnya 3",
+                        harga: 100000,
                         url: "https://google.com"
                     }
                 ]
@@ -456,11 +502,13 @@ var data = [
                     {
                         value: "Opsi 2.1 Produk Lainnya 3",
                         label: "Opsi 2.1 Produk Lainnya 3",
+                        harga: 100000,
                         url: "https://google.com"
                     },
                     {
                         value: "Opsi 2.2 Produk Lainnya 3",
                         label: "Opsi 2.2 Produk Lainnya 3",
+                        harga: 100000,
                         url: "https://google.com"
                     }
                 ]
