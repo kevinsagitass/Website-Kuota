@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://olshopgue.bukaolshop.site/asset/js/jquery-2.0.0.min.js" type="text/javascript"></script>
+    <script src="https://olshopgue.bukaolshop.site/asset/js/bootstrap.min.js" type="text/javascript"></script>
+    <link href="https://olshopgue.bukaolshop.site/asset/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <div id="formBox">
+        <h1 id="title">Dapatkan Kuota Murah Disini</h1>
+
+
+        <select name="selectionBox1" class="dropdown" id="selectionBox1" onchange="selection1Selected()">
+           
+        </select>
+    
+        <select name="selectionBox2" class="dropdown" id="selectionBox2" onchange="selection2Selected()">
+           
+        </select>
+
+        <select name="selectionBox3" class="dropdown" id="selectionBox3" onchange="selection3Selected()">
+           
+        </select>
+
+        <select name="selectionBox4" class="dropdown" id="selectionBox4">
+           
+        </select>
+
+        <div class="containerHarga">
+            <label>Rp: </label>
+            <label id="labelHarga">-</label>
+        </div>
+
+        <div>
+            <label><a href="#" id="linkKetentuan">Ketentuan Pembelian</a></label>
+        </div>
+
+        <button id="orderBtn" onclick="btnClick()">Order Sekarang</button>
+    
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

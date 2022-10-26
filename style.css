@@ -1,0 +1,60 @@
+#formBox {
+    width: 30%;
+    display: block;
+    top: 50%;
+    left: 50%;
+    margin: auto;
+}
+
+.dropdown {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    font-size: 20px;
+    border: 1px solid #d7dadb;
+}
+
+#title {
+    font-weight: bold;
+    color: #fa9d0b;
+    text-align: center;
+    width: 100%;
+}
+
+#orderBtn {
+    width: 100%;
+    margin-top: 5%;
+    background-color: #fe9017;
+    color: white;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.containerHarga {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#linkKetentuan {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+@media (max-width: 1000px) {
+
+    #formBox {
+        width: 90%;
+    }
+
+    #title {
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+}
