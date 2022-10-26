@@ -1,52 +1,788 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <script src="https://olshopgue.bukaolshop.site/asset/js/jquery-2.0.0.min.js" type="text/javascript"></script>
-    <script src="https://olshopgue.bukaolshop.site/asset/js/bootstrap.min.js" type="text/javascript"></script>
-    <link href="https://olshopgue.bukaolshop.site/asset/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="style.css">
-    <script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
-</head>
-<body>
-
-
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <script
+      src="https://olshopgue.bukaolshop.site/asset/js/jquery-2.0.0.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://olshopgue.bukaolshop.site/asset/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+    <link
+      href="https://olshopgue.bukaolshop.site/asset/css/bootstrap.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style></style>
+  </head>
+  <body>
     <div id="formBox">
-        <h1 id="title">Dapatkan Kuota Murah Disini</h1>
+      <h1 id="title">Dapatkan Kuota Murah Disini</h1>
 
+      <select
+        name="selectionBox1"
+        class="dropdown"
+        id="selectionBox1"
+        onchange="selection1Selected()"
+      ></select>
 
-        <select name="selectionBox1" class="dropdown" id="selectionBox1" onchange="selection1Selected()">
-           
-        </select>
-    
-        <select name="selectionBox2" class="dropdown" id="selectionBox2" onchange="selection2Selected()">
-           
-        </select>
+      <select
+        name="selectionBox2"
+        class="dropdown"
+        id="selectionBox2"
+        onchange="selection2Selected()"
+      ></select>
 
-        <select name="selectionBox3" class="dropdown" id="selectionBox3" onchange="selection3Selected()">
-           
-        </select>
+      <select
+        name="selectionBox3"
+        class="dropdown"
+        id="selectionBox3"
+        onchange="selection3Selected()"
+      ></select>
 
-        <select name="selectionBox4" class="dropdown" id="selectionBox4" onchange="selection4Selected()">
-           
-        </select>
+      <select
+        name="selectionBox4"
+        class="dropdown"
+        id="selectionBox4"
+        onchange="selection4Selected()"
+      ></select>
 
-        <div class="containerHarga">
-            <label>Rp: </label>
-            <label id="labelHarga">-</label>
-        </div>
+      <div class="containerHarga">
+        <label>Rp: </label>
+        <label id="labelHarga">-</label>
+      </div>
 
-        <div>
-            <label><a href="#" id="linkKetentuan">Ketentuan Pembelian</a></label>
-        </div>
+      <div>
+        <label><a href="#" id="linkKetentuan">Ketentuan Pembelian</a></label>
+      </div>
 
-        <button id="orderBtn" onclick="btnClick()">Order Sekarang</button>
-    
+      <button id="orderBtn" onclick="btnClick()">Order Sekarang</button>
     </div>
 
-    <script src="data.js"></script>
-    <script src="script.js"></script>
-</body>
-</html>
+    <script>
+      var data = [
+        {
+          value: "pulsa",
+          label: "Pulsa",
+          children: [
+            {
+              value: "Opsi 1 Pulsa",
+              label: "Opsi 1 Pulsa",
+              children: [
+                {
+                  value: "Opsi 1.1 Pulsa",
+                  label: "Opsi 1.1 Pulsa",
+                  harga: 100000,
+                  url: "https://google.com",
+                },
+                {
+                  value: "Opsi 1.2 Pulsa",
+                  label: "Opsi 1.2 Pulsa",
+                  harga: 200000,
+                  url: "https://google.com",
+                },
+              ],
+            },
+            {
+              value: "Opsi 2 Pulsa",
+              label: "Opsi 2 Pulsa",
+              children: [
+                {
+                  value: "Opsi 2.1 Pulsa",
+                  label: "Opsi 2.1 Pulsa",
+                  harga: 300000,
+                  url: "https://google.com",
+                },
+                {
+                  value: "Opsi 2.2 Pulsa",
+                  label: "Opsi 2.2 Pulsa",
+                  harga: 400000,
+                  url: "https://google.com",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          value: "paket internet",
+          label: "Paket Internet",
+          children: [
+            {
+              value: "Opsi 1 Paket Internet",
+              label: "Opsi 1 Paket Internet",
+              children: [
+                {
+                  value: "Opsi 1.1 Paket Internet",
+                  label: "Opsi 1.1 Paket Internet",
+                  children: [
+                    {
+                      value: "Opsi 1.1.1 Paket Internet",
+                      label: "Opsi 1.1.1 Paket Internet",
+                      harga: 500000,
+                      url: "https://google.com",
+                    },
+                    {
+                      value: "Opsi 1.1.2 Paket Internet",
+                      label: "Opsi 1.1.2 Paket Internet",
+                      harga: 600000,
+                      url: "https://google.com",
+                    },
+                  ],
+                },
+                {
+                  value: "Opsi 1.2 Paket Internet",
+                  label: "Opsi 1.2 Paket Internet",
+                  children: [
+                    {
+                      value: "Opsi 1.2.1 Paket Internet",
+                      label: "Opsi 1.2.1 Paket Internet",
+                      harga: 700000,
+                      url: "https://google.com",
+                    },
+                    {
+                      value: "Opsi 1.2.2 Paket Internet",
+                      label: "Opsi 1.2.2 Paket Internet",
+                      harga: 800000,
+                      url: "https://google.com",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              value: "Opsi 2 Paket Internet",
+              label: "Opsi 2 Paket Internet",
+              children: [
+                {
+                  value: "Opsi 2.1 Paket Internet",
+                  label: "Opsi 2.1 Paket Internet",
+                  children: [
+                    {
+                      value: "Opsi 2.1.1 Paket Internet",
+                      label: "Opsi 2.1.1 Paket Internet",
+                      harga: 900000,
+                      url: "https://google.com",
+                    },
+                    {
+                      value: "Opsi 2.1.2 Paket Internet",
+                      label: "Opsi 2.1.2 Paket Internet",
+                      harga: 1000000,
+                      url: "https://google.com",
+                    },
+                  ],
+                },
+                {
+                  value: "Opsi 2.2 Paket Internet",
+                  label: "Opsi 2.2 Paket Internet",
+                  children: [
+                    {
+                      value: "Opsi 2.2.1 Paket Internet",
+                      label: "Opsi 2.2.1 Paket Internet",
+                      harga: 1100000,
+                      url: "https://google.com",
+                    },
+                    {
+                      value: "Opsi 2.2.2 Paket Internet",
+                      label: "Opsi 2.2.2 Paket Internet",
+                      harga: 1200000,
+                      url: "https://google.com",
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          value: "voucher internet",
+          label: "Voucher Internet",
+          children: [
+            {
+              value: "Opsi 1 Voucher Internet",
+              label: "Opsi 1 Voucher Internet",
+              children: [
+                {
+                  value: "Opsi 1.1 Voucher Internet",
+                  label: "Opsi 1.1 Voucher Internet",
+                  children: [
+                    {
+                      value: "Opsi 1.1.1 Voucher Internet",
+                      label: "Opsi 1.1.1 Voucher Internet",
+                      harga: 100000,
+                      url: "https://google.com",
+                    },
+                    {
+                      value: "Opsi 1.1.2 Voucher Internet",
+                      label: "Opsi 1.1.2 Voucher Internet",
+                      harga: 100000,
+                      url: "https://google.com",
+                    },
+                  ],
+                },
+                {
+                  value: "Opsi 1.2 Voucher Internet",
+                  label: "Opsi 1.2 Voucher Internet",
+                  children: [
+                    {
+                      value: "Opsi 1.2.1 Voucher Internet",
+                      label: "Opsi 1.2.1 Voucher Internet",
+                      harga: 100000,
+                      url: "https://google.com",
+                    },
+                    {
+                      value: "Opsi 1.2.2 Voucher Internet",
+                      label: "Opsi 1.2.2 Voucher Internet",
+                      harga: 100000,
+                      url: "https://google.com",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              value: "Opsi 2 Voucher Internet",
+              label: "Opsi 2 Voucher Internet",
+              children: [
+                {
+                  value: "Opsi 2.1 Voucher Internet",
+                  label: "Opsi 2.1 Voucher Internet",
+                  children: [
+                    {
+                      value: "Opsi 2.1.1 Voucher Internet",
+                      label: "Opsi 2.1.1 Voucher Internet",
+                      harga: 100000,
+                      url: "https://google.com",
+                    },
+                    {
+                      value: "Opsi 2.1.2 Voucher Internet",
+                      label: "Opsi 2.1.2 Voucher Internet",
+                      harga: 100000,
+                      url: "https://google.com",
+                    },
+                  ],
+                },
+                {
+                  value: "Opsi 2.2 Voucher Internet",
+                  label: "Opsi 2.2 Voucher Internet",
+                  children: [
+                    {
+                      value: "Opsi 2.2.1 Voucher Internet",
+                      label: "Opsi 2.2.1 Voucher Internet",
+                      harga: 100000,
+                      url: "https://google.com",
+                    },
+                    {
+                      value: "Opsi 2.2.2 Voucher Internet",
+                      label: "Opsi 2.2.2 Voucher Internet",
+                      harga: 100000,
+                      url: "https://google.com",
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          value: "paket sms/telp",
+          label: "Paket SMS/Telp",
+          children: [
+            {
+              value: "Opsi 1 Paket SMS/Telp",
+              label: "Opsi 1 Paket SMS/Telp",
+              children: [
+                {
+                  value: "Opsi 1.1 Paket SMS/Telp",
+                  label: "Opsi 1.1 Paket SMS/Telp",
+                  harga: 100000,
+                  url: "https://google.com",
+                },
+                {
+                  value: "Opsi 1.2 Paket SMS/Telp",
+                  label: "Opsi 1.2 Paket SMS/Telp",
+                  harga: 100000,
+                  url: "https://google.com",
+                },
+              ],
+            },
+            {
+              value: "Opsi 2 Paket SMS/Telp",
+              label: "Opsi 2 Paket SMS/Telp",
+              children: [
+                {
+                  value: "Opsi 2.1 Paket SMS/Telp",
+                  label: "Opsi 2.1 Paket SMS/Telp",
+                  harga: 100000,
+                  url: "https://google.com",
+                },
+                {
+                  value: "Opsi 2.2 Paket SMS/Telp",
+                  label: "Opsi 2.2 Paket SMS/Telp",
+                  harga: 100000,
+                  url: "https://google.com",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          value: "e-wallet",
+          label: "E-Wallet: OVO, Dana, ShopeePay, Gopay, Linkaja",
+          children: [
+            {
+              value: "Opsi 1 E-Wallet",
+              label: "Opsi 1 E-Wallet",
+              children: [
+                {
+                  value: "Opsi 1.1 E-Wallet",
+                  label: "Opsi 1.1 E-Wallet",
+                  harga: 100000,
+                  url: "https://google.com",
+                },
+                {
+                  value: "Opsi 1.2 E-Wallet",
+                  label: "Opsi 1.2 E-Wallet",
+                  harga: 100000,
+                  url: "https://google.com",
+                },
+              ],
+            },
+            {
+              value: "Opsi 2 E-Wallet",
+              label: "Opsi 2 E-Wallet",
+              children: [
+                {
+                  value: "Opsi 2.1 E-Wallet",
+                  label: "Opsi 2.1 E-Wallet",
+                  harga: 100000,
+                  url: "https://google.com",
+                },
+                {
+                  value: "Opsi 2.2 E-Wallet",
+                  label: "Opsi 2.2 E-Wallet",
+                  harga: 100000,
+                  url: "https://google.com",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          value: "token pln",
+          label: "Token PLN",
+          children: [
+            {
+              value: "Opsi 1 Token PLN",
+              label: "Opsi 1 Token PLN",
+              children: [
+                {
+                  value: "Opsi 1.1 Token PLN",
+                  label: "Opsi 1.1 Token PLN",
+                  harga: 100000,
+                  url: "https://google.com",
+                },
+                {
+                  value: "Opsi 1.2 Token PLN",
+                  label: "Opsi 1.2 Token PLN",
+                  harga: 100000,
+                  url: "https://google.com",
+                },
+              ],
+            },
+            {
+              value: "Opsi 2 Token PLN",
+              label: "Opsi 2 Token PLN",
+              children: [
+                {
+                  value: "Opsi 2.1 Token PLN",
+                  label: "Opsi 2.1 Token PLN",
+                  harga: 100000,
+                  url: "https://google.com",
+                },
+                {
+                  value: "Opsi 2.2 Token PLN",
+                  label: "Opsi 2.2 Token PLN",
+                  harga: 100000,
+                  url: "https://google.com",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          value: "tagihan",
+          label: "Tagihan : HP Pascabayar, Listrik, Telkom, PDAM.",
+          children: [
+            {
+              value: "Opsi 1 Tagihan",
+              label: "Opsi 1 Tagihan",
+              children: [
+                {
+                  value: "Opsi 1.1 Tagihan",
+                  label: "Opsi 1.1 Tagihan",
+                  harga: 100000,
+                  url: "https://google.com",
+                },
+                {
+                  value: "Opsi 1.2 Tagihan",
+                  label: "Opsi 1.2 Tagihan",
+                  harga: 100000,
+                  url: "https://google.com",
+                },
+              ],
+            },
+            {
+              value: "Opsi 2 Tagihan",
+              label: "Opsi 2 Tagihan",
+              children: [
+                {
+                  value: "Opsi 2.1 Tagihan",
+                  label: "Opsi 2.1 Tagihan",
+                  harga: 100000,
+                  url: "https://google.com",
+                },
+                {
+                  value: "Opsi 2.2 Tagihan",
+                  label: "Opsi 2.2 Tagihan",
+                  harga: 100000,
+                  url: "https://google.com",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          value: "produk lainnya 1",
+          label: "Produk Lainnya 1",
+          children: [
+            {
+              value: "Opsi 1 Produk Lainnya 1",
+              label: "Opsi 1 Produk Lainnya 1",
+              children: [
+                {
+                  value: "Opsi 1.1 Produk Lainnya 1",
+                  label: "Opsi 1.1 Produk Lainnya 1",
+                  harga: 100000,
+                  url: "https://google.com",
+                },
+                {
+                  value: "Opsi 1.2 Produk Lainnya 1",
+                  label: "Opsi 1.2 Produk Lainnya 1",
+                  harga: 100000,
+                  url: "https://google.com",
+                },
+              ],
+            },
+            {
+              value: "Opsi 2 Produk Lainnya 1",
+              label: "Opsi 2 Produk Lainnya 1",
+              children: [
+                {
+                  value: "Opsi 2.1 Produk Lainnya 1",
+                  label: "Opsi 2.1 Produk Lainnya 1",
+                  harga: 100000,
+                  url: "https://google.com",
+                },
+                {
+                  value: "Opsi 2.2 Produk Lainnya 1",
+                  label: "Opsi 2.2 Produk Lainnya 1",
+                  harga: 100000,
+                  url: "https://google.com",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          value: "produk lainnya 2",
+          label: "Produk Lainnya 2",
+          children: [
+            {
+              value: "Opsi 1 Produk Lainnya 2",
+              label: "Opsi 1 Produk Lainnya 2",
+              children: [
+                {
+                  value: "Opsi 1.1 Produk Lainnya 2",
+                  label: "Opsi 1.1 Produk Lainnya 2",
+                  harga: 100000,
+                  url: "https://google.com",
+                },
+                {
+                  value: "Opsi 1.2 Produk Lainnya 2",
+                  label: "Opsi 1.2 Produk Lainnya 2",
+                  harga: 100000,
+                  url: "https://google.com",
+                },
+              ],
+            },
+            {
+              value: "Opsi 2 Produk Lainnya 2",
+              label: "Opsi 2 Produk Lainnya 2",
+              children: [
+                {
+                  value: "Opsi 2.1 Produk Lainnya 2",
+                  label: "Opsi 2.1 Produk Lainnya 2",
+                  harga: 100000,
+                  url: "https://google.com",
+                },
+                {
+                  value: "Opsi 2.2 Produk Lainnya 2",
+                  label: "Opsi 2.2 Produk Lainnya 2",
+                  harga: 100000,
+                  url: "https://google.com",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          value: "produk lainnya 3",
+          label: "Produk Lainnya 3",
+          children: [
+            {
+              value: "Opsi 1 Produk Lainnya 3",
+              label: "Opsi 1 Produk Lainnya 3",
+              children: [
+                {
+                  value: "Opsi 1.1 Produk Lainnya 3",
+                  label: "Opsi 1.1 Produk Lainnya 3",
+                  harga: 100000,
+                  url: "https://google.com",
+                },
+                {
+                  value: "Opsi 1.2 Produk Lainnya 3",
+                  label: "Opsi 1.2 Produk Lainnya 3",
+                  harga: 100000,
+                  url: "https://google.com",
+                },
+              ],
+            },
+            {
+              value: "Opsi 2 Produk Lainnya 3",
+              label: "Opsi 2 Produk Lainnya 3",
+              children: [
+                {
+                  value: "Opsi 2.1 Produk Lainnya 3",
+                  label: "Opsi 2.1 Produk Lainnya 3",
+                  harga: 100000,
+                  url: "https://google.com",
+                },
+                {
+                  value: "Opsi 2.2 Produk Lainnya 3",
+                  label: "Opsi 2.2 Produk Lainnya 3",
+                  harga: 100000,
+                  url: "https://google.com",
+                },
+              ],
+            },
+          ],
+        },
+      ];
 
+      var selectionBox1 = $("#selectionBox1");
+      var selectionBox2 = $("#selectionBox2");
+      var selectionBox3 = $("#selectionBox3");
+      var selectionBox4 = $("#selectionBox4");
+      var labelHarga = $("#labelHarga");
+
+      // Hide Box 4
+      selectionBox4.css("display", "none");
+
+      // Populate Selection Box 1, 2, 3 First Load
+      $.each(data, function (i, box1) {
+        selectionBox1.append(
+          $("<option>", {
+            value: box1.value,
+            text: box1.label,
+          })
+        );
+      });
+
+      let box1 = $.grep(data, function (item) {
+        return item.value == selectionBox1.find(":selected").val();
+      });
+
+      $.each(box1[0].children, function (i, box2) {
+        selectionBox2.append(
+          $("<option>", {
+            value: box2.value,
+            text: box2.label,
+          })
+        );
+      });
+
+      $.each(box1[0].children[0].children, function (i, box3) {
+        selectionBox3.append(
+          $("<option>", {
+            value: box3.value,
+            text: box3.label,
+          })
+        );
+      });
+
+      // Set Harga First Load
+      labelHarga.text(box1[0].children[0].children[0].harga);
+
+      function selection1Selected() {
+        selectionBox2.empty();
+        selectionBox3.empty();
+        selectionBox4.empty();
+
+        let value = selectionBox1.find(":selected").val();
+
+        let box2Data = data.find((x) => x.value == value).children;
+
+        $.each(box2Data, function (i, box2) {
+          selectionBox2.append(
+            $("<option>", {
+              value: box2.value,
+              text: box2.label,
+            })
+          );
+        });
+
+        $.each(box2Data[0].children, function (j, box3) {
+          selectionBox3.append(
+            $("<option>", {
+              value: box3.value,
+              text: box3.label,
+            })
+          );
+        });
+
+        if (value == "paket internet" || value == "voucher internet") {
+          selectionBox4.css("display", "block");
+
+          $.each(box2Data[0].children[0].children, function (j, box4) {
+            selectionBox4.append(
+              $("<option>", {
+                value: box4.value,
+                text: box4.label,
+              })
+            );
+          });
+
+          labelHarga.text(box2Data[0].children[0].children[0].harga);
+        } else {
+          selectionBox4.css("display", "none");
+
+          labelHarga.text(box2Data[0].children[0].harga);
+        }
+      }
+
+      function selection2Selected() {
+        selectionBox3.find("option").remove();
+        selectionBox4.find("option").remove();
+
+        let value1 = selectionBox1.find(":selected").val();
+        let value2 = selectionBox2.find(":selected").val();
+
+        let box3Data = data
+          .find((x) => x.value == value1)
+          .children.find((x) => x.value == value2).children;
+
+        $.each(box3Data, function (i, box3) {
+          selectionBox3.append(
+            $("<option>", {
+              value: box3.value,
+              text: box3.label,
+            })
+          );
+        });
+
+        if (value1 == "paket internet" || value1 == "voucher internet") {
+          $.each(box3Data[0].children, function (j, box4) {
+            selectionBox4.append(
+              $("<option>", {
+                value: box4.value,
+                text: box4.label,
+              })
+            );
+          });
+
+          labelHarga.text(box3Data[0].children[0].harga);
+        } else {
+          labelHarga.text(box3Data[0].harga);
+        }
+      }
+
+      function selection3Selected() {
+        selectionBox4.find("option").remove();
+
+        let value1 = selectionBox1.find(":selected").val();
+        let value2 = selectionBox2.find(":selected").val();
+        let value3 = selectionBox3.find(":selected").val();
+
+        let box3Data = data
+          .find((x) => x.value == value1)
+          .children.find((x) => x.value == value2)
+          .children.find((x) => x.value == value3);
+
+        if (value1 == "paket internet" || value1 == "voucher internet") {
+          let box4Data = box3Data.children;
+
+          $.each(box4Data, function (j, box4) {
+            selectionBox4.append(
+              $("<option>", {
+                value: box4.value,
+                text: box4.label,
+              })
+            );
+          });
+
+          labelHarga.text(box4Data[0].harga);
+        } else {
+          // Tampilkan Harga
+
+          labelHarga.text(box3Data.harga);
+        }
+      }
+
+      function selection4Selected() {
+        let value1 = selectionBox1.find(":selected").val();
+        let value2 = selectionBox2.find(":selected").val();
+        let value3 = selectionBox3.find(":selected").val();
+        let value4 = selectionBox4.find(":selected").val();
+
+        let box4Data = data
+          .find((x) => x.value == value1)
+          .children.find((x) => x.value == value2)
+          .children.find((x) => x.value == value3)
+          .children.find((x) => x.value == value4);
+
+        // Tampilkan Harga
+        labelHarga.text(box4Data.harga);
+      }
+
+      function btnClick() {
+        let value1 = selectionBox1.find(":selected").val();
+        let value2 = selectionBox2.find(":selected").val();
+        let value3 = selectionBox3.find(":selected").val();
+
+        let url = "";
+        if (value1 == "paket internet" || value1 == "voucher internet") {
+          let value4 = selectionBox4.find(":selected").val();
+
+          url = data
+            .find((x) => x.value == value1)
+            .children.find((x) => x.value == value2)
+            .children.find((x) => x.value == value3)
+            .children.find((x) => x.value == value4).url;
+        } else {
+          url = data
+            .find((x) => x.value == value1)
+            .children.find((x) => x.value == value2)
+            .children.find((x) => x.value == value3).url;
+        }
+
+        window.location = url;
+      }
+    </script>
+  </body>
+</html>
